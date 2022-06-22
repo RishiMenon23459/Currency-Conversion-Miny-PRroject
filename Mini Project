@@ -1,0 +1,42 @@
+#include <stdio.h>
+Int main ()
+{
+int currency;
+int userinputUSDtoINR; // User inputted for USD to INR;
+int userinputUSDtoKSH; // User inputted for USD to KSH;
+int userinputUSDtoUGX; // User inputted for USD to UGX;
+float USDtoINR; // variable that stores the converted USD->INR;
+float USDtoKSH; // stores the converted USD->KSH;
+float USDtoUGX; // stores the converted USD->UGX;
+
+printf ("Welcome to Currency Converter! \n");
+printf ("Here is a list of conversations to choose from: \n");
+printf ("Enter 1 for US Dollars to Indian Rupees. \n");
+printf ("Enter 2 for US Dollars to Kenyan Shillings. \n");
+printf ("Enter 3 for US Dollars to Ugandan Shillings. \n");
+scanf ("%d", &currency);
+if (currency == 1)
+{
+    printf ("Please enter the US Dollars amount: \n");
+    scanf ("%d", &userinputUSDtoINR);
+    USDtoINR = userinputUSDtoINR * 78.23;
+    printf ("Indian Rupees: %.2f INR", USDtoINR); // %.2f = rounds the float to only 2 decimal places;
+}
+else if (currency == 2)
+{
+    printf ("Please enter the US Dolars amount: \n");
+    scanf ("%d", &userinputUSDtoKSH);
+    USDtoKSH = userinputUSDtoKSH * 117.65;
+    printf ("Kenyan Shillings: %.2f KSH", USDtoKSH);
+}
+else if (currency == 3)
+{
+    printf ("Please enter the USD amount: \n");
+    scanf ("%d", &userinputUSDtoUGX);
+    USDtoUGX = userinputUSDtoUGX * 3774.44;
+    printf ("Ugandan Shillings: %.2f UGX", USDtoUGX);
+}
+else
+    printf ("Please enter correct choice. \n");
+return 0;
+}
